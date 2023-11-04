@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get 'words/index'
   root to: "words#index"
   resources :users, only: [:edit, :update]
+  resources :rooms, only: [:new, :create]
 end
