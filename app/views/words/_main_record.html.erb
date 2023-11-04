@@ -12,37 +12,7 @@
 </div>
 
 <div class="words">
-  <div class="word">
-    <div class="upper-word">
-      <div class="word-user">
-        Tom
-      </div>
-      <div class="word-date">
-        2020/3/31(Wed) 12:43:30
-      </div>
-    </div>
-    <div class="lower-word">
-      <div class="word-content">
-        おはよう
-      </div>
-    </div>
-  </div>
-
-  <div class="word">
-    <div class="upper-word">
-      <div class="word-user">
-        Tom
-      </div>
-      <div class="word-date">
-        2020/3/31(Wed) 12:47:30
-      </div>
-    </div>
-    <div class="lower-word">
-      <div class="word-content">
-        こんばんは
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'word', collection: @words %>
 </div>
 
 <%= form_with model: [@room, @word], class: 'form', local: true do |f| %>
