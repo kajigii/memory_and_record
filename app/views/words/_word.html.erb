@@ -10,5 +10,6 @@
       <!-- 投稿したメッセージ内容を記述する -->
       <%= word.content %>
     </div>
+    <%= image_tag word.image.variant(resize: '500x500'), class: 'word-image' if word.image.attached? %>
   </div>
 </div>
