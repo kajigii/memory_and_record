@@ -1,57 +1,22 @@
 <div class="chat-header">
-  <div class="left-header">
+  <div class="header">
     <div class="header-title">
-      hogefuga
-    </div>
-  </div>
-  <div class="right-header">
-    <div class="header-button">
-      <a href="#">チャットを終了する</a>
+      <%= @room.name %>
     </div>
   </div>
 </div>
 
 <div class="words">
-  <div class="word">
-    <div class="upper-word">
-      <div class="word-user">
-        Tom
-      </div>
-      <div class="word-date">
-        2020/3/31(Wed) 12:43:30
-      </div>
-    </div>
-    <div class="lower-word">
-      <div class="word-content">
-        おはよう
-      </div>
-    </div>
-  </div>
-
-  <div class="word">
-    <div class="upper-word">
-      <div class="word-user">
-        Tom
-      </div>
-      <div class="word-date">
-        2020/3/31(Wed) 12:47:30
-      </div>
-    </div>
-    <div class="lower-word">
-      <div class="word-content">
-        こんばんは
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'word', collection: @words %>
 </div>
 
-<div class="form">
+<%= form_with model: [@room, @word], class: 'form', local: true do |f| %>
   <div class="form-input">
-    <input class="form-word" placeholder= "type a word">
+    <%= f.text_field :content, class: 'form-word', placeholder: 'type a word' %>
     <label class="form-image">
       <span class="image-file">画像</span>
-      <input type="file" class="hidden">
+      <%= f.file_field :image, class: 'hidden' %>
     </label>
   </div>
-  <input class="form-submit" type="submit" value="送信">
-</div>
+  <%= f.submit '送信', class: 'form-submit' %>
+<% end %>
