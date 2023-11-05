@@ -5,6 +5,12 @@ class WordsController < ApplicationController
     @words = @room.words.includes(:user)
   end
 
+  def new
+    @word = Word.new
+    @room = Room.find(params[:room_id])
+    @words = @room.words.includes(:user)
+  end
+
   def create
     @room = Room.find(params[:room_id])
     @word = @room.words.new(word_params)
@@ -15,6 +21,22 @@ class WordsController < ApplicationController
       render :index, status: :unprocessable_entity
     end
   end
+
+  def destroy
+    word = Word.find(params[:id])
+    word.destroy
+    redirect_to root_path
+  end
+
+  # def edit
+  #   @word = Word.find(params[:id])
+  # end
+
+  # def update
+  #   word = Word.find(params[:id])
+  #   word.update(word_params)
+  #   redirect_to root_path
+  # end
 
   private
 

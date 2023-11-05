@@ -1,0 +1,33 @@
+<div class="forms">
+
+  <%= form_with model: [@room, @word], class: 'form', local: true do |f| %>
+    <div class="form-contents">
+      <div class="form-input">
+        <%= f.text_field :content, class: 'form-word', placeholder: 'type a word' %>
+      </div>
+
+      <label class="form-image">
+        <span class="image-file">画像</span>
+        <%= f.file_field :image, class: 'hidden' %>
+      </label>
+    </div>
+
+   <%# モデル追加後に記述 %>
+    <div>
+      人物
+    </div>
+    <div>
+      出典
+    </div>
+  
+
+    <div class="post-btn-contents">
+      <%= f.submit '送信', class: 'form-submit' %>
+      <%=link_to 'もどる', room_words_path, class:"back-btn" %>
+    </div>
+  <% end %>
+
+</div>
+
+
+  

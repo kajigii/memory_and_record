@@ -12,4 +12,14 @@
     </div>
     <%= image_tag word.image.variant(resize: '500x500'), class: 'word-image' if word.image.attached? %>
   </div>
+  <%# <div class="more">
+    <ul class="more_list">
+      <li>
+        <%= link_to '編集', edit_room_word_path(room_id: word.room.id, id: word.id) %>
+      <%# </li>
+      <li>
+        <%= link_to '削除', room_word_path(room_id: word.room.id, id: word.id), data: { turbo_method: :delete } %>
+      <%# </li>
+    </ul>
+  </div> %> 
 </div>
