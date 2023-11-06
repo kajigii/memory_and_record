@@ -14,6 +14,7 @@ class WordsController < ApplicationController
   def create
     @room = Room.find(params[:room_id])
     @word = @room.words.new(word_params)
+    
     if @word.save
       redirect_to room_words_path(@room)
     else
@@ -24,19 +25,27 @@ class WordsController < ApplicationController
 
   def destroy
     word = Word.find(params[:id])
+    @room = Room.find(params[:room_id])
     word.destroy
-    redirect_to root_path
+    redirect_to room_words_path(@room)
   end
 
-  # def edit
-  #   @word = Word.find(params[:id])
-  # end
+  def edit
+    @word = Word.find(params[:id])
+    @room = Room.find(params[:room_id])
+  end
 
-  # def update
-  #   word = Word.find(params[:id])
-  #   word.update(word_params)
-  #   redirect_to root_path
-  # end
+  def update
+    word = Word.find(params[:id])
+    @room = Room.find(params[:room_id])
+    word.update(word_params)
+    redirect_to room_words_path(@room)
+  end
+
+  def show
+    @word = Word.find(params[:id])
+    @room = Room.find(params[:room_id])
+  end
 
   private
 
