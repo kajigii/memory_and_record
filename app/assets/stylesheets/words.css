@@ -78,28 +78,46 @@
 
 .words {
   background-color: #FAFAFA;
-  height: calc(100vh - 100px - 90px);
+  height: calc(100vh - 100px);
   padding: 46px 40px 0;
   overflow: scroll;
 }
 
 .word {
-  margin: 10px 0 0 0;
+  width: 90%;
+  margin: 10px auto;
+  /* background-color: red; */
 }
 
 .upper-word{
   display: flex;
+  justify-content: space-between;
+  /* background-color: blue; */
 }
 
 .word-user {
   color: #434a54;
   font-size: 16px;
+  /* background-color: yellow; */
 }
 
-.word-date {
-  color: #999;
+.more{
+  height: 30px;
+  width: 100px;
+  display: flex;
+}
+
+.more_list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100px;
+  right: 0;
   font-size: 12px;
-  padding-left: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); */
+  border-radius: 3px;
 }
 
 .lower-word {
@@ -112,46 +130,85 @@
   margin-bottom: 40px;
 }
 
-.form {
-  background-color: #DDDDDD;
-  height: 90px;
+.forms {
   padding: 20px 40px;
+  height: 500px;
   display: flex;
+  align-items: flex-start;
+}
+
+.form{
+  width: 100%;
+}
+
+.form-contents{
+  display: flex;
+  align-items: flex-end;
 }
 
 .form-input {
   background-color: white;
   display: flex;
+  height: 150px;
   width: 100%;
 }
 
 .form-word {
-  border: none;
-  height: 50px;
+  
   width: 100%;
   padding-left: 10px;
 }
+
+.form-image {
+  font-size: 15px;
+  background-color: #38AEF0;
+  color: white;
+  padding: 15px;
+  width: 70px;
+  height: 50px;
+  text-align: center;
+  align-items: flex-end;
+}
+
+.post-btn-contents{
+  display: flex;
+  justify-content: center;
+}
+
 
 .form-submit {
   background-color: #38AEF0;
   border: none;
   color: white;
   font-size: 16px;
-  height: 50px;
+  height: 80px;
+  width: 100px;
   margin-left: 15px;
   padding: 0 20px;
 }
 
-.form-image {
-  font-size: 12px;
-  background-color: lightblue;
+.back-btn{
+  border: 1px solid #aaa;
+  text-decoration: none;
+  background-color: #38AEF0;
+  border: none;
   color: white;
-  padding: 12px;
-  width: 60px;
-  margin: 5px 10px;
-  text-align: center;
+  font-size: 15px;
+  height: 80px;
+  width: 100px;
+  margin-left: 15px;
+  padding: 30px 25px;
 }
 
 .hidden {
   display: none;
 }
+
+.top{
+  margin: 0 0 20px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 20px;
+  color: #666;
+}
+
