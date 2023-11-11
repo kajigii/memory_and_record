@@ -10,7 +10,7 @@
         <li>
           <%= link_to '詳細', room_word_path(room_id: word.room.id, id: word.id) %>
         </li>
-        <% if user_signed_in? && current_user.id == word.user_id %>
+        <% if current_user.id == word.user_id %>
           <li>
             <%= link_to '編集', edit_room_word_path(room_id: word.room.id, id: word.id) %> 
           </li>

@@ -40,11 +40,26 @@
 
 .room {
   padding: 20px 0 40px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .room-name a {
   text-decoration: none;
   color: white;
+}
+
+.room-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50px;
+  right: 0;
+  font-size: 12px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); */
+  border-radius: 3px;
 }
 
 .record {
@@ -97,7 +112,7 @@
 
 .word-user {
   color: #434a54;
-  font-size: 16px;
+  font-size: 25px;
   /* background-color: yellow; */
 }
 
@@ -126,7 +141,7 @@
 
 .word-content {
   color: #434a54;
-  font-size: 14px;
+  font-size: 15px;
   margin-bottom: 40px;
 }
 
