@@ -16,15 +16,17 @@
       </label>
     </div>
 
-   <%# モデル追加後に記述 %>
-    <div>
-      人物
-    </div>
-    <div>
-      出典
+      <%# モデル追加後に記述 %>
+    <div class="form-contents">
+      <div class="form-input">
+        <%= f.text_field :person, class: 'form-detail', placeholder: '人物' %>
+      </div>
+
+      <div class="form-input">
+        <%= f.text_field :source, class: 'form-detail', placeholder: '出典' %>
+      </div>
     </div>
   
-
     <div class="post-btn-contents">
       <%= f.submit '送信', class: 'form-submit' %>
       <%=link_to 'もどる', room_words_path, class:"back-btn" %>
