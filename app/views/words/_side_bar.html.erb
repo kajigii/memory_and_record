@@ -11,8 +11,12 @@
   <% current_user.rooms.each do |room| %>
     <div class="room">
       <div class="room-name">
-        <a href="#"><%= room.name %></a>
+        <%= link_to room.name, room_words_path(room) %>
       </div>
+      <!-- 完成後にコメントアウト消す -->
+      <%# <div class= "room-list">
+        <%= link_to '削除', room_path(room), data: { turbo_method: :delete }, method: :delete %>
+      <%# </div> %> 
     </div>
   <% end %>
 </div>
