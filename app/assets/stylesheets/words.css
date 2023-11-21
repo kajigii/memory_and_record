@@ -145,10 +145,15 @@
   margin-bottom: 40px;
 }
 
+.word-details{
+  display: flex;
+}
+
 .word-detail{
   color: #434a54;
   font-size: 15px;
   margin-bottom: 40px;
+  padding-right: 150px;
 }
 
 .forms {
