@@ -11,7 +11,7 @@
 .side-bar-header {
   height: 100px;
   padding: 0 20px;
-  background-color: #253141;
+  background-color: green;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,7 +32,7 @@
 }
 
 .rooms {
-  background-color: #2F3E51;
+  background-color: lightgreen;
   height: calc(100vh - 100px);
   padding: 0 20px;
   overflow: scroll;
@@ -46,7 +46,7 @@
 
 .room-name a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .room-list {
@@ -145,6 +145,12 @@
   margin-bottom: 40px;
 }
 
+.word-detail{
+  color: #434a54;
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+
 .forms {
   padding: 20px 40px;
   height: 500px;
@@ -169,7 +175,6 @@
 }
 
 .form-word {
-  
   width: 100%;
   padding-left: 10px;
 }
@@ -183,6 +188,13 @@
   height: 50px;
   text-align: center;
   align-items: flex-end;
+}
+
+/* 人物と出典 */
+.form-detail{
+  width: 80%;
+  height: 50%;
+  padding-left: 10px;
 }
 
 .post-btn-contents{

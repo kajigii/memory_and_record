@@ -39,6 +39,13 @@
           <%= @word.content %>
         </div>
         <%= image_tag @word.image.variant(resize: '500x500'), class: 'word-image' if @word.image.attached? %>
+        
+        <div class="word-detail">
+          <%= @word.person %>
+        </div>
+        <div class="word-detail">
+          <%= @word.source %>
+        </div>
       </div>
     </div>
 

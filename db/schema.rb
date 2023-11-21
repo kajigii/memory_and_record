@@ -69,6 +69,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_04_140059) do
 
   create_table "words", charset: "utf8", force: :cascade do |t|
     t.string "content"
+    t.string "person"
+    t.string "source"
     t.bigint "room_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false

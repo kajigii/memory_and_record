@@ -1,11 +1,13 @@
 <div class= "top">
   <h1>編集する</h1>
 </div>
+
 <div class="forms">
+
   <%= form_with model: [@room, @word], class: 'form', local: true do |f| %>
     <div class="form-contents">
       <div class="form-input">
-        <%= f.text_field :content, class: 'form-word', placeholder: 'type a word' %>
+        <%= f.text_field :content, class: 'form-word', placeholder: '心に残っている言葉を書いてください(画像は拡張子が「.png」または「.jpeg」のみ保存可)' %>
       </div>
 
       <label class="form-image">
@@ -14,12 +16,15 @@
       </label>
     </div>
 
-    <%# モデル追加後に記述 %>
-    <div>
-      人物
-    </div>
-    <div>
-      出典
+      <%# モデル追加後に記述 %>
+    <div class="form-contents">
+      <div class="form-input">
+        <%= f.text_field :person, class: 'form-detail', placeholder: '人物' %>
+      </div>
+
+      <div class="form-input">
+        <%= f.text_field :source, class: 'form-detail', placeholder: '出典' %>
+      </div>
     </div>
   
     <div class="post-btn-contents">
