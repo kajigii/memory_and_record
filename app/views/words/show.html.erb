@@ -40,11 +40,13 @@
         </div>
         <%= image_tag @word.image.variant(resize: '500x500'), class: 'word-image' if @word.image.attached? %>
         
-        <div class="word-detail">
-          <%= @word.person %>
-        </div>
-        <div class="word-detail">
-          <%= @word.source %>
+        <div class="word-details">
+          <div class="word-detail">
+            人物:  <%= @word.person %>
+          </div>
+          <div class="word-detail">
+            出典:  <%= @word.source %>
+          </div>
         </div>
       </div>
     </div>
