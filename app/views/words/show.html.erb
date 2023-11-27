@@ -3,57 +3,57 @@
     <%= render "side_bar" %>
   </div>
   <div class="record">
-  
     <div class="chat-header">
       <div class="header">
         <div class="header-title">
           <%= @room.name %>
         </div>
       </div>
-   </div>
-
-    <div class="word">
-      <div class="upper-word">
-        <div class="word-user">
-          <!-- 投稿したユーザー名情報を出力する -->
-          <%= @word.user.name %>
-        </div>
-        <% if user_signed_in? && current_user.id == @word.user_id %>
-          <div class= "more">
-            <!-- 投稿した内容を修正する -->
-            <ul class="more_list">
-              <li>
-                <%= link_to '編集', edit_room_word_path(room_id: @word.room.id, id: @word.id) %> 
-              </li>
-              <li>
-                <%= link_to '削除', room_word_path(room_id: @word.room.id, id: @word.id), data: { turbo_method: :delete } %>
-              </li>
-            </ul>
-          </div>
-        <% end %>
+      <div class="header-button">
+        <%= link_to "投稿する", new_room_word_path %>
       </div>
+    </div>
 
-      <div class="lower-word">
-        <div class="word-content">
-          <!-- 投稿したメッセージ内容を記述する -->
-          <%= @word.content %>
-        </div>
-        <%= image_tag @word.image.variant(resize: '500x500'), class: 'word-image' if @word.image.attached? %>
-        
-        <div class="word-details">
-          <div class="word-detail">
-            人物:  <%= @word.person %>
+    <div class="words">
+      <div class="word">
+        <div class="upper-word">
+          <div class="word-user">
+            <!-- 投稿したユーザー名情報を出力する -->
+            <%= @word.user.name %>
           </div>
-          <div class="word-detail">
-            出典:  <%= @word.source %>
+          <% if user_signed_in? && current_user.id == @word.user_id %>
+            <div class= "more">
+              <!-- 投稿した内容を修正する -->
+              <ul class="more_list">
+                <li>
+                  <%= link_to '編集', edit_room_word_path(room_id: @word.room.id, id: @word.id) %> 
+                </li>
+                <li>
+                  <%= link_to '削除', room_word_path(room_id: @word.room.id, id: @word.id), data: { turbo_method: :delete } %>
+                </li>
+              </ul>
+            </div>
+          <% end %>
+        </div>
+
+        <div class="lower-word">
+          <div class="word-content">
+            <!-- 投稿したメッセージ内容を記述する -->
+            <%= @word.content %>
+          </div>
+          <%= image_tag @word.image.variant(resize: '500x500'), class: 'word-image' if @word.image.attached? %>
+        
+          <div class="word-details">
+            <div class="word-detail">
+              人物:  <%= @word.person %>
+            </div>
+            <div class="word-detail">
+              出典:  <%= @word.source %>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-
-
-
   </div>
 </div>
 
