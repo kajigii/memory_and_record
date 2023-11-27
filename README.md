@@ -136,34 +136,34 @@ https://memory-and-record-iq9a.onrender.com
 
 
 # 実装した機能についての画像
-https://gyazo.com/385bbd24fdc5a4a45ac60d7c9e2aed76
+https://gyazo.com/a80562ad7fb691e2b6678a8a6aa3d3d2
 新規投稿ルーム作成
 
-https://gyazo.com/4d63543e678acfdfc3efca2c44056d57
+https://gyazo.com/2ddf1181dcad2ed51754d158496bf2d6
 新規投稿(画像なし)
 
-https://gyazo.com/62fe0dd01aeb790d9ffbbc7f530b8291
+https://gyazo.com/520f0d835edb76922b4fc55ead2a079a
 詳細画面へ遷移
 
-https://gyazo.com/34e4678711ef12742a6bc96f7a065578
+https://gyazo.com/cddea960fbd0aea33edee34ae98e88c0
 投稿内容編集
 
-https://gyazo.com/b77f0cbd30a36666a7b86a1592e00bb2
-画像の変更
-
-https://gyazo.com/223528a2d54994313380a81c3c241b79
+https://gyazo.com/f5529c7651e1826fb9a22a39b06e24d8
 別ユーザーが投稿内容と詳細画面を閲覧
 
-https://gyazo.com/a8fa5a74b0ea5a791dc168455ca8fad8
+https://gyazo.com/5ba4119ddbcedbe71b3e8f053e41a101
 投稿内容削除
 
-https://gyazo.com/cab7e34d6a3bcf79710f70ea9e8f5813
+https://gyazo.com/487acc890d191ad5e5a1ebb36f9d2c1e
 言葉のみを投稿した場合
 
-https://gyazo.com/1a5493dde9a8d2d33e68e24561bfa420
+https://gyazo.com/c5a2a27ed4be535bf5af3a277c3afc66
 画像のみを投稿した場合
 
-https://gyazo.com/093525a1509a6b511a36209820c4764f
+https://gyazo.com/16aea3ea72f036b6fdc5b1b5506506d5
+画像の変更
+
+https://gyazo.com/f07c0fbccfb5cec8dda1b7cbca4e2c61
 必須項目を入力しないで投稿した場合
 
 
