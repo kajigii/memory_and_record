@@ -133,7 +133,7 @@ https://memory-record-9pxc.onrender.com
 私自身、本以外にもドラマやアニメ、音楽などで心に残った言葉をまとめた投稿を見かけ、その投稿をきっかけに新しい作品を発見することがありました。こういった様々なジャンルで心に残った言葉を共有する事ができれば、新たな作品を見つける手助けになるのではないかと考え、アプリケーションを開発することにした。
 
 # 洗い出した要件
-
+https://docs.google.com/spreadsheets/d/19nhl1I8QcBqvErB0AauDhZ1WNSx_bSD2BXbLImenTHQ/edit#gid=982722306
 
 # 実装した機能についての画像
 https://gyazo.com/a80562ad7fb691e2b6678a8a6aa3d3d2
