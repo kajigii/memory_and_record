@@ -90,7 +90,7 @@ Memory_and_Record
 
 # URL
 
-https://memory-and-record-iq9a.onrender.com
+https://memory-record-9pxc.onrender.com
 
 # テスト用アカウント
 
