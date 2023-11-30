@@ -127,44 +127,44 @@ https://memory-record-9pxc.onrender.com
 
 # アプリケーションを作成した背景
 これまでの読書で感動する言葉に出会うことが多く、それをメモしようと考えた。しかし、メモを紙やスマートフォンに取るときには以下の課題があった。
-・長い言葉は紙へのメモでは読みにくいため写真で撮る場合があり、保存場所がバラバラになる
-・紙でメモすると感じた順に書くため、後で読み返すときに整理が難しい
-また、これらのメモを共有できれば、未読の人が新しい本に興味を持つきっかけになるのではないかと思いついた。
+・長い言葉は紙へのメモでは読みにくいため写真で撮る場合があり、保存場所がバラバラになる 
+・紙でメモすると感じた順に書くため、後で読み返すときに整理が難しい 
+また、これらのメモを共有できれば、未読の人が新しい本に興味を持つきっかけになるのではないかと思いついた。 
 私自身、本以外にもドラマやアニメ、音楽などで心に残った言葉をまとめた投稿を見かけ、その投稿をきっかけに新しい作品を発見することがありました。こういった様々なジャンルで心に残った言葉を共有する事ができれば、新たな作品を見つける手助けになるのではないかと考え、アプリケーションを開発することにした。
 
 # 洗い出した要件
 https://docs.google.com/spreadsheets/d/19nhl1I8QcBqvErB0AauDhZ1WNSx_bSD2BXbLImenTHQ/edit#gid=982722306
 
-# 実装した機能についての画像
-https://gyazo.com/a80562ad7fb691e2b6678a8a6aa3d3d2
+# 実装した機能についてのGIF
 新規投稿ルーム作成
+https://gyazo.com/a80562ad7fb691e2b6678a8a6aa3d3d2
 
-https://gyazo.com/2ddf1181dcad2ed51754d158496bf2d6
 新規投稿(画像なし)
+https://gyazo.com/2ddf1181dcad2ed51754d158496bf2d6
 
-https://gyazo.com/520f0d835edb76922b4fc55ead2a079a
 詳細画面へ遷移
+https://gyazo.com/520f0d835edb76922b4fc55ead2a079a
 
-https://gyazo.com/cddea960fbd0aea33edee34ae98e88c0
 投稿内容編集
+https://gyazo.com/cddea960fbd0aea33edee34ae98e88c0
 
-https://gyazo.com/f5529c7651e1826fb9a22a39b06e24d8
 別ユーザーが投稿内容と詳細画面を閲覧
+https://gyazo.com/f5529c7651e1826fb9a22a39b06e24d8
 
-https://gyazo.com/5ba4119ddbcedbe71b3e8f053e41a101
 投稿内容削除
+https://gyazo.com/5ba4119ddbcedbe71b3e8f053e41a101
 
-https://gyazo.com/487acc890d191ad5e5a1ebb36f9d2c1e
 言葉のみを投稿した場合
+https://gyazo.com/487acc890d191ad5e5a1ebb36f9d2c1e
 
-https://gyazo.com/c5a2a27ed4be535bf5af3a277c3afc66
 画像のみを投稿した場合
+https://gyazo.com/c5a2a27ed4be535bf5af3a277c3afc66
 
-https://gyazo.com/16aea3ea72f036b6fdc5b1b5506506d5
 画像の変更
+https://gyazo.com/16aea3ea72f036b6fdc5b1b5506506d5
 
-https://gyazo.com/f07c0fbccfb5cec8dda1b7cbca4e2c61
 必須項目を入力しないで投稿した場合
+https://gyazo.com/f07c0fbccfb5cec8dda1b7cbca4e2c61
 
 
 # 実装予定の機能
