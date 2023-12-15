@@ -9,44 +9,59 @@
         <%= f.text_field :name, class: 'chat__room_name chat-room-form__input', placeholder: 'ルーム名を入力してください'%>
       </div>
     </div>
-    <div class='chat-room-form__field'>
-    </div>
+    
 
 
-    <div class='chat-room-form__field'>
-      <div class='chat-room-form__field--left'>
+    <%# <div class='chat-room-form__field'> %>
+      <%# <div class='chat-room-form__field--left'> %>
         <%# 共有/非共有の分岐実装予定 %>
-        <label class='chat-room-form__label' for='chat_room_チャットメンバー'>共有者</label>
-      </div>
-
-      <div class='chat-room-form__field--right'>
-        <% if @room.public %>
-          <!-- 公開ルームの場合、全てのユーザーを選択可能にする -->
-          <select name="room[user_ids][]" multiple>
-            <% User.where.not(id: current_user.id).each do |user| %>
-              <option value="<%= user.id %>"><%= user.name %></option>
-            <% end %>
-          </select>
-        <% else %>
-          <!-- 非公開ルームの場合、特定のユーザーを選択不可にし、作成者のみを表示 -->
-          <p><strong>非公開ルーム</strong></p>
-          <p><%= current_user.name %></p>
-          <%= hidden_field_tag "room[user_ids][]", current_user.id %>
-        <% end %>
-      </div>
+        <%# <label class='chat-room-form__label' for='chat_room_チャットメンバー'>共有者</label>
+      </div> %>
 
       <%# <div class='chat-room-form__field--right'>
-        <select name="room[user_ids][]">
-          <option value="">チャットするユーザーを選択してください</option>
-          <% User.where.not(id: current_user.id).each do |user| %>
-            <%# <option value=<%= user.id %>><%= user.name %></option>
-          <%# end %>
-        <%# </select>
-        <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
+        <% if @room.public %>
+          <!-- 公開ルームの場合、全てのユーザーを選択可能にする -->
+          <%# <select name="room[user_ids][]" multiple>
+            <% User.where.not(id: current_user.id).each do |user| %>
+              <%# <option value="<%= user.id >"><%= user.name ></option>
+            <%# <% end %>
+          <%# </select>
+        <% else %>
+          <!-- 非公開ルームの場合、特定のユーザーを選択不可にし、作成者のみを表示 -->
+          <%# <p><strong>非公開ルーム</strong></p>
+          <p><%= current_user.name ></p>
+          <%# <%= hidden_field_tag "room[user_ids][]", current_user.id %> 
+        <%# <% end %> 
       <%# </div> %> 
 
+      <%# <div class='chat-room-form__field--right'>
+        <select name="room[public]">
+          <option value="true">公開</option>
+          <option value="false">非公開</option>
+        </select>
+      </div> %>
 
+      <%# <div class='chat-room-form__field--right'> %>
+        <%# <select name="room[user_ids][]"> %>
+          <%# <option value="">チャットするユーザーを選択してください</option> %>
+          <%# <% User.where.not(id: current_user.id).each do |user| %> 
+            <%# <option value=<%= user.id><%= user.name ></option> %>
+          <%# end %>
+        <%# </select> %>
+        <%# <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>
+      <%# </div>  
+    </div>%>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :public, class: 'chat-room-form__label' %>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.check_box :public %> <!-- チェックボックスで公開/非公開を選択 -->
+      </div>
     </div>
+
+    
+  </div>
 
 
 
