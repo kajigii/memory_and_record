@@ -8,19 +8,36 @@ class RoomsController < ApplicationController
   end
 
   def create
-    # if params[:room][:public]
-    #   create_public_room
-    # else
-    #   create_private_room
-    # end
-
     @room = Room.new(room_params)
+  
     if @room.save
+      # 保存が成功した場合
+  
+      # 非公開の場合は作成者だけが入室可能にする
+      if !@room.public?
+        ActiveRecord::Base.transaction do
+          room_user = RoomUser.create(user: current_user, room: @room, creator_only: true)
+          unless room_user.valid?
+            puts room_user.errors.full_messages
+            raise ActiveRecord::Rollback
+          end
+        end
+      end
+  
       redirect_to root_path
     else
       render :new, status: :unprocessable_entity
     end
   end
+
+  # def create
+  #   @room = Room.new(room_params)
+  #   if @room.save
+  #     redirect_to root_path
+  #   else
+  #     render :new, status: :unprocessable_entity
+  #   end
+  # end
 
   def destroy
     @room = Room.find(params[:id])
@@ -53,6 +70,6 @@ class RoomsController < ApplicationController
   # end
 
   def room_params
-    params.require(:room).permit(:name, user_ids: [])
+    params.require(:room).permit(:name, :public)
   end
 end
