@@ -1,6 +1,8 @@
 class RoomsController < ApplicationController
 
   def index
+    @rooms = current_user.rooms
+    # @rooms = Room.all # または必要なデータを取得するロジック
   end
   
   def new
@@ -14,9 +16,11 @@ class RoomsController < ApplicationController
       # 保存が成功した場合
   
       # 非公開の場合は作成者だけが入室可能にする
-      if !@room.public?
-        ActiveRecord::Base.transaction do
+      ActiveRecord::Base.transaction do
+        if !@room.public?
           room_user = RoomUser.create(user: current_user, room: @room, creator_only: true)
+  
+          # バリデーションエラーがある場合はロールバック
           unless room_user.valid?
             puts room_user.errors.full_messages
             raise ActiveRecord::Rollback
