@@ -2,7 +2,7 @@ class RoomsController < ApplicationController
 
   def index
     @rooms = current_user.rooms
-    # @rooms = Room.all # または必要なデータを取得するロジック
+    @public_rooms = Room.where(public: true)
   end
   
   def new
