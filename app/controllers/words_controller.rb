@@ -3,6 +3,7 @@ class WordsController < ApplicationController
     @word = Word.new
     @room = Room.find(params[:room_id])
     @words = @room.words.includes(:user)
+    @public_rooms = Room.where(public: true)
   end
 
   def new
@@ -45,6 +46,7 @@ class WordsController < ApplicationController
   def show
     @word = Word.find(params[:id])
     @room = Room.find(params[:room_id])
+    @public_rooms = Room.where(public: true)
   end
 
   private
