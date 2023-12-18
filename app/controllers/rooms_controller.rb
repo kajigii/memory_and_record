@@ -76,4 +76,18 @@ class RoomsController < ApplicationController
   def room_params
     params.require(:room).permit(:name, :public)
   end
+
+  # def move_to_index
+  #   @room = Room.find_by(id: params[:id])
+  #   unless @room
+  #     redirect_to root_path
+  #   end
+  # end
+
+  # def move_to_index
+  #   @room = Room.find(params[:id])
+  #   if current_user != @room.user
+  #     redirect_to root_path
+  #   end
+  # end
 end
