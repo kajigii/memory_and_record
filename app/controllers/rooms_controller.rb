@@ -1,5 +1,5 @@
 class RoomsController < ApplicationController
-  before_action :check_room_access, only: [:index, :show]
+  before_action :check_room_access, only: [:show]
 
   def index
     @rooms = current_user.rooms
@@ -35,15 +35,6 @@ class RoomsController < ApplicationController
     end
   end
 
-  # def create
-  #   @room = Room.new(room_params)
-  #   if @room.save
-  #     redirect_to root_path
-  #   else
-  #     render :new, status: :unprocessable_entity
-  #   end
-  # end
-
   def show
   end
 
@@ -54,28 +45,6 @@ class RoomsController < ApplicationController
   end
 
   private
-
-  # def create_public_room
-  #   @room = PublicRoom.new(room_params)
-  #   if @room.save
-  #     redirect_to root_path, notice: '公開ルームが作成されました'
-  #   else
-  #     render :new, status: :unprocessable_entity
-  #   end
-  # end
-
-  # def create_private_room
-  #   @room = PrivateRoom.new(room_params)
-  #   if @room.save
-  #     redirect_to root_path, notice: '非公開ルームが作成されました'
-  #   else
-  #     render :new, status: :unprocessable_entity
-  #   end
-  # end
-
-  # def room_params
-  #   params.require(:room).permit(:name, :public, user_ids: [])
-  # end
 
   def room_params
     params.require(:room).permit(:name, :public)
@@ -89,17 +58,4 @@ class RoomsController < ApplicationController
       redirect_to root_path, alert: 'このルームにアクセスする権限がありません。'
     end
   end
-  # def move_to_index
-  #   @room = Room.find_by(id: params[:id])
-  #   unless @room
-  #     redirect_to root_path
-  #   end
-  # end
-
-  # def move_to_index
-  #   @room = Room.find(params[:id])
-  #   if current_user != @room.user
-  #     redirect_to root_path
-  #   end
-  # end
 end
