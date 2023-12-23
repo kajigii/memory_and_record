@@ -10,20 +10,11 @@
       </div>
     </div>
     <div class='chat-room-form__field'>
-    </div>
-    <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'>
-        <%# 共有/非共有の分岐実装予定 %>
-        <label class='chat-room-form__label' for='chat_room_チャットメンバー'>共有者</label>
+        <%= f.label :public, class: 'chat-room-form__label' %>
       </div>
       <div class='chat-room-form__field--right'>
-        <select name="room[user_ids][]">
-          <option value="">チャットするユーザーを選択してください</option>
-          <% User.where.not(id: current_user.id).each do |user| %>
-            <option value=<%= user.id %>><%= user.name %></option>
-          <% end %>
-        </select>
-        <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
+        <%= f.check_box :public %> <!-- チェックボックスで公開/非公開を選択 -->
       </div>
     </div>
     <div class='chat-room-form__field'>
