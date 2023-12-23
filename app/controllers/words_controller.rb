@@ -1,7 +1,5 @@
 class WordsController < ApplicationController
-  # before_action :authenticate_user!, only: [:index, :show, :new, :create, :edit, :destroy]
   before_action :move_to_index, only: [:edit, :update, :destroy]
-  before_action :check_room_access, only: [:show]
   before_action :set_word, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -64,15 +62,6 @@ class WordsController < ApplicationController
     @word = Word.find(params[:id])
     if current_user != @word.user
       redirect_to root_path
-    end
-  end
-
-  def check_room_access
-    @room = Room.find(params[:id])
-
-    # 非公開ルームかつアクセス権がない場合の制御
-    if !@room.public? && !@room.users.include?(current_user)
-      redirect_to root_path, alert: 'このルームにアクセスする権限がありません。'
     end
   end
 

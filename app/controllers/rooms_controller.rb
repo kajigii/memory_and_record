@@ -1,5 +1,4 @@
 class RoomsController < ApplicationController
-  before_action :check_room_access, only: [:show]
 
   def index
     @rooms = current_user.rooms
@@ -48,14 +47,5 @@ class RoomsController < ApplicationController
 
   def room_params
     params.require(:room).permit(:name, :public)
-  end
-
-  def check_room_access
-    @room = Room.find(params[:id])
-
-    # 非公開ルームかつアクセス権がない場合の制御
-    if !@room.public? && !@room.users.include?(current_user)
-      redirect_to root_path, alert: 'このルームにアクセスする権限がありません。'
-    end
   end
 end
