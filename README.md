@@ -82,7 +82,7 @@ Things you may want to cover:
 
 # アプリケーション名
 
-Memory_and_Record
+Memory_Record
 
 # アプリケーション概要
 
@@ -90,7 +90,7 @@ Memory_and_Record
 
 # URL
 
-https://memory-record-9pxc.onrender.com
+https://memory-record-ji11.onrender.com
 
 # テスト用アカウント
 
@@ -136,39 +136,40 @@ https://memory-record-9pxc.onrender.com
 https://docs.google.com/spreadsheets/d/19nhl1I8QcBqvErB0AauDhZ1WNSx_bSD2BXbLImenTHQ/edit#gid=982722306
 
 # 実装した機能についてのGIF
-新規投稿ルーム作成
-https://gyazo.com/a80562ad7fb691e2b6678a8a6aa3d3d2
+新規公開ルーム作成
+https://gyazo.com/4f6d23f06ef4ef52002d51d1072e25a1
+
+新規非公開ルーム作成
+https://gyazo.com/361bc9fbb0e16eb84437a39dfebb7215
 
 新規投稿(画像なし)
-https://gyazo.com/2ddf1181dcad2ed51754d158496bf2d6
+https://gyazo.com/fd80e330b1767853b1f3d3c65813c896
 
-詳細画面へ遷移
-https://gyazo.com/520f0d835edb76922b4fc55ead2a079a
-
-投稿内容編集
-https://gyazo.com/cddea960fbd0aea33edee34ae98e88c0
+詳細画面へ遷移して投稿内容編集
+https://gyazo.com/fd868f6f97d4ee4b03dce6bd761b03d0
 
 別ユーザーが投稿内容と詳細画面を閲覧
-https://gyazo.com/f5529c7651e1826fb9a22a39b06e24d8
+https://gyazo.com/0ac9e81c8b7ba8363d9fd89aa6f3c05e
 
 投稿内容削除
-https://gyazo.com/5ba4119ddbcedbe71b3e8f053e41a101
+https://gyazo.com/398be733485fd3c86f3be1c8145c0beb
 
 言葉のみを投稿した場合
-https://gyazo.com/487acc890d191ad5e5a1ebb36f9d2c1e
+https://gyazo.com/4209e746a9694eb0ac4c1e0a367f9336
 
 画像のみを投稿した場合
-https://gyazo.com/c5a2a27ed4be535bf5af3a277c3afc66
+https://gyazo.com/9ab4cb1ff811468a16109f45fadad49b
 
 画像の変更
-https://gyazo.com/16aea3ea72f036b6fdc5b1b5506506d5
+https://gyazo.com/37a1847c6073d1d3ba448bc7087be4cb
 
 必須項目を入力しないで投稿した場合
-https://gyazo.com/f07c0fbccfb5cec8dda1b7cbca4e2c61
+実装予定
 
 
 # 実装予定の機能
-非公開ルームのアクセス制限機能：作成者以外に非公開ルームは表示されないがURLで非公開ルームに入室が出来てしまう(編集や削除は出来ないが閲覧や新規投稿が出来てしまう)
+・非公開ルームのアクセス制限機能：作成者以外に非公開ルームは表示されないがURLで非公開ルームに入室が出来てしまう(編集や削除は出来ないが閲覧や新規投稿が出来てしまう)
+・必須項目を入力しないで投稿した場合、入力した内容は保存されていないが、ルーム一覧から公開ルームの表示が消えてしまっている
 
 # データベース設計
 ![Alt text](memory-1.png)

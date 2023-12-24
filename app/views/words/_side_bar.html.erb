@@ -19,12 +19,15 @@
       <%# </div> %> 
     </div>
   <% end %>
-  <% @public_rooms.each do |room| %>
-    <div class="room">
-      <div class="room-name">
-        <%= link_to room.name, room_words_path(room) %>
+  <% if @public_rooms.present? %>
+    <% @public_rooms.each do |room| %>
+      <div class="room">
+        <div class="room-name">
+          <%= link_to room.name, room_words_path(room) %>
+        </div>
       </div>
-    </div>
+    <% end %>
+  <% else %>
   <% end %>
   <!-- 完成後にコメントアウト消す -->
       <%# <div class= "room-list">

@@ -7,6 +7,11 @@ class WordsController < ApplicationController
     @room = Room.find(params[:room_id])
     @words = @room.words.includes(:user)
     @public_rooms = Room.where(public: true)
+    if @public_rooms.present?
+    else
+      # @public_roomsが存在しない場合、リダイレクトする
+      redirect_to root_path, alert: 'No public rooms found.'
+    end
   end
 
   def new
