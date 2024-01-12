@@ -19,6 +19,7 @@ RSpec.describe Word, type: :model do
         expect(@word).to be_valid
       end
     end
+    
     context 'メッセージが投稿できない場合' do
       it 'contentとimageが空では保存できない' do
         @word.content = ''
