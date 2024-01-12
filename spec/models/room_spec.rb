@@ -10,7 +10,16 @@ RSpec.describe Room, type: :model do
       it "nameの値が存在すれば作成できる" do
         expect(@room).to be_valid
       end
+      it "publicの値がtrueなら公開ルームが作成できる" do
+        @room.public = true
+        expect(@room).to be_valid
+      end
+      it "publicの値がfalseなら非公開ルームが作成できる" do
+        @room.public = false
+        expect(@room).to be_valid
+      end
     end
+
     context '新規作成できない場合' do
       it "nameが空では作成できない" do
         @room.name = ''
